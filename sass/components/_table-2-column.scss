@@ -1,0 +1,26 @@
+.table-2-column {
+	max-width: 310px;
+	margin-bottom: 60px;
+	div {
+		max-width: 310px;
+		border-bottom: 2px solid $separator-color;
+		margin-top: 10px;
+	}
+	&:first-of-type {
+		margin-right: 65px;
+	}
+	span {
+		color: $paragraph-color;
+		font-family: Roboto;
+		font-size: $paragraph-font-size;
+		font-weight: $bold;
+		line-height: 42px;
+	}
+	.number {
+		float: right;
+		color: #333333;
+		font-family: Roboto;
+		font-size: $paragraph-font-size;
+		font-weight: $light;
+	}
+}

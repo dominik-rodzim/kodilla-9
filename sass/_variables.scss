@@ -1,16 +1,43 @@
+@font-face {
+  font-family: 'Glyphter';
+  src: url('Glyphter.eot') format('eot');
+  src: url('Glyphter.woff') format('woff'),
+  url('Glyphter.ttf') format('truetype'),
+  url('Glyphter.svg') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+ 
+
 /* Colors */
+
 $orange: #f58220;
 $white: #ffffff;
 $sidebar-background: #191919;
 $main-background: #f5f5f2;
 $paragraph-color: #a6a6a6;
-$separator-coolor: #e3e3e3;;
+$separator-color: #e3e3e3;
+$link-color: #56819f;
+$blue: #80bfca;
 
 
 /* Font sizes */
+
 $paragraph-font-size: 16px;
 $button-font-size: 18px;
 $menu-font-size: 14px;
+$wallet-font: 20px;
 
 /* Fonts */
+
 $paragraph-font: "Roboto", Helvetica, Arial;
+
+/* Font weights */
+
+$light: 300;
+$normal: 500;
+$bold: 700;
+
+/* Line height */
+
+$header-line-height: 42px;

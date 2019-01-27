@@ -1,0 +1,20 @@
+.links-table {
+	line-height: 60px;
+	margin: 23px auto;
+	h3 {
+		margin: 0;
+		line-height: 60px;
+	}
+}
+.table-line {
+	border-bottom: 1px solid rgb(227, 227, 227);
+	&:hover {
+		background-color: #F1F3F3;
+	}
+	&:first-of-type {
+		border-top: 1px solid rgb(227, 227, 227);
+	}
+	h3 {
+		padding-left: 14px;
+	}
+}

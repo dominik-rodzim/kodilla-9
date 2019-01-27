@@ -1,0 +1,51 @@
+.input-wraper {
+	display: inline-block;
+	border-radius: 3px;
+	border: 1px solid $separator-color;
+	position: relative;
+	&::after {
+	    display: block;
+	    content: "";
+	    width: 1px;
+	    height: 34px;
+	    background-color: #e3e3e3;
+	    position: absolute;
+	    top: 4px;
+	    left: 170px;
+	}
+	i {
+		padding-right: 15px;
+	}
+}
+.date-filter {
+	min-width: 350px;
+	border-radius: 3px;
+	text-align: center;
+	padding: 35px 0;
+	border-bottom: 1px solid $separator-color;
+	input {
+		display: inline-block;
+		width: 100px;
+		padding-left: 20px;
+		padding-right: 30px;
+		line-height: 40px;
+		border: none;
+		color: #333333;
+		font-family: $paragraph-font;
+		font-size: $menu-font-size;
+		font-weight: $light;
+		line-height: 42px;
+		&:first-of-type {
+			padding-right: 50px;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+	button {
+		padding: 11px 13px;
+	}
+	.button-icon 	{
+		color: white;
+	}
+}

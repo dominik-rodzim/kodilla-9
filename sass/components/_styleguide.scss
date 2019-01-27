@@ -1,5 +1,68 @@
 h1 {
-	font-size: 70px;
 }
-
-$font: 40px;
+h2 {
+	color: $paragraph-color;
+	font-family: $paragraph-font;
+	font-size: $paragraph-font-size;
+	font-weight: $normal;
+	text-transform: uppercase;
+	line-height: $header-line-height;
+	margin: 0;
+	padding-left: 20px;
+}
+h3 {
+	color: $paragraph-color;
+	font-family: $paragraph-font;
+	font-size: $paragraph-font-size;
+	font-weight: $bold;
+	line-height: $header-line-height;
+}
+h4 {
+}
+h5 {
+}
+h6 {
+}
+p {
+	color: $paragraph-color;
+	font-family: $paragraph-font;
+	font-size: $paragraph-font-size;
+	font-weight: $light;
+}
+a {
+	color: $link-color;
+	font-family: $paragraph-font;
+	font-size: $paragraph-font-size;
+	font-weight: $light;
+	text-decoration: none;
+}
+ul {
+}
+li {
+	color: #999999;
+	font-family: $paragraph-font;
+	font-size: $menu-font-size;
+	font-weight: $light;
+	line-height: $header-line-height;
+	list-style-type: none;
+}
+i {
+	font-family: Glyphter;
+	font-style: normal;
+    font-size: 15px;
+    color: #9c9c9c;
+}
+button {
+	border-radius: 3px;
+	background-color: $orange;
+	border: 0 none;
+	font-family: $paragraph-font;
+	font-size: $button-font-size;
+	color: $white;
+	padding: 10px 20px;
+	font-weight: $light;
+	margin: 0 auto;
+	&:hover {
+		background-color: $blue;
+	}
+}

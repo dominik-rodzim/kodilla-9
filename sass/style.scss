@@ -2,4 +2,20 @@
 @import "mixins";
 @import "normalize";
 @import "layout";
-@import "components/styleguide"
+
+/* components */
+@import "components/styleguide";
+@import "components/button";
+@import "components/data-filter";
+@import "components/graph";
+@import "components/links-table";
+@import "components/notification";
+@import "components/sidebar-menu";
+@import "components/table-2-column";
+@import "components/top-bar";
+
+/* sections */
+@import "sections/main-content";
+@import "sections/sidebar";
+@import "sections/top-bar";
+
