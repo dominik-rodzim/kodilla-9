@@ -39,4 +39,22 @@
     }
 }
 
+$break-l: 1200px;
+$break-m: 992px;
+$break-s: 768px;
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == break-s {
+        @media only screen and (max-width: $break-s) { @content };
+    }
+    @if $breakpoint == break-m {
+        @media only screen and (max-width: $break-m) { @content };
+    }
+    @if $breakpoint == break-l {
+        @media only screen and (max-width: $break-l) { @content };
+    }
+    @if $breakpoint == hover {
+        @media only screen and (min-width: $break-l) { @content };
+    }
+}
 

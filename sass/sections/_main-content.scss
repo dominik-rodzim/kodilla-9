@@ -2,6 +2,10 @@
 	padding-left: 190px;
 	background-color: $main-background;
 	width: calc(100% - 190px)!important;
+	@include respond(break-m) {
+        padding-left: 55px;
+        width: calc(100% - 55px)!important;
+    }
 }
 
 .inner-container {

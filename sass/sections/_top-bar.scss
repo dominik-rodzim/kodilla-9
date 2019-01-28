@@ -16,4 +16,30 @@
 			line-height: 58px;
 		}
 	}
+    @include respond(break-s) {
+    	display: none;
+    }
+}
+
+.mobile-top-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #191919;
+    height: 50px;
+    display: none;
+    #hamburger-mobile {
+		position: fixed;
+	    left: 20px;
+	    top: 15px;
+    }
+    #logo-mobile {
+	    display: block;
+	    margin: 0 auto;
+	    margin-top: 12px;    	
+    }
+    @include respond(break-s) {
+    	display: block;
+    }
 }

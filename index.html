@@ -7,25 +7,34 @@
       <link rel="stylesheet" type="text/css" href="css/style.css">
    </head>
    <body>
-      <div class="sidebar">
-         <nav>
-            <img id="logo" src="images/dashboard/logo.png">
-            <ul>
-               <li><i>K</i>General</li>
-               <li><i>J</i>Details</li>
-               <li><i>L</i>Links</li>
-               <li><i>G</i>Banners</li>
-               <li><i>S</i>Personal data</li>
-               <li><i>R</i>Payout</li>
-               <li><i>U</i>Postback</li>
-            </ul>
-            <div class="message">
-               <h2>Your Manager</h2>
-               <img src="images/dashboard/photo.png">
-               <span><a href="#">Mikhael E.</a></span>
-            </div>
-         </nav>
-      </div>
+      <nav class="sidebar">
+         <img id="logo" src="images/dashboard/logo.png">
+         <img id="hamburger" src="images/dashboard/hamburger.png">
+         <ul>
+            <li><i>K</i><span class="menu-text">General</span></li>
+            <li><i>J</i><span class="menu-text">Details</span></li>
+            <li><i>L</i><span class="menu-text">Links</span></li>
+            <li><i>G</i><span class="menu-text">Banners</span></li>
+            <li><i>S</i><span class="menu-text">Personal data</span></span></li>
+            <li><i>R</i><span class="menu-text">Payout</span></li>
+            <li><i>U</i><span class="menu-text">Postback</span></li>
+         </ul>
+         <div class="message">
+            <h2>Your Manager</h2>
+            <img src="images/dashboard/photo.png">
+            <span><a href="#">Mikhael E.</a></span>
+         </div>
+         <ul class="mobile-sidebar">
+            <li><i>b</i><span>$1,500.00</span><i>A</i></li>
+            <li><i>P</i></li>
+            <li><i>V</i><a href="#">Leonardo Dicaprio</a></li>
+            <li><i>W</i></li>
+         </ul>
+      </nav>
+      <nav class="mobile-top-bar">
+         <img id="hamburger-mobile" src="images/dashboard/hamburger.png">
+         <img id="logo-mobile" src="images/dashboard/logo.png">
+      </nav>
             <div class="top-bar clearfix">
                <ul>
                   <li>
@@ -173,4 +182,15 @@
                   </div>
                </div>
             </div>
+      <script>
+         function toggleMenu(visible) {
+           document.querySelector('.sidebar').classList.toggle('show', visible)
+         }
+
+         document.querySelector('#hamburger-mobile').addEventListener('click', function(e) {
+           e.preventDefault();
+           toggleMenu()
+         });
+      </script>
    </body>
+</html>

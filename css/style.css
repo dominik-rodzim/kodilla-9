@@ -495,7 +495,7 @@ li {
 i {
   font-family: Glyphter;
   font-style: normal;
-  font-size: 15px;
+  font-size: 16px;
   color: #9c9c9c;
 }
 
@@ -633,13 +633,27 @@ button:hover {
 }
 
 .sidebar ul li {
-  padding-left: 20px;
+  padding-left: 19px;
+}
+
+.sidebar ul li span {
+  padding-right: 12px;
+}
+
+.sidebar ul li i {
+  padding-right: 12px;
+  position: relative;
+  top: 2px;
 }
 
 .sidebar ul li:hover {
   border-left: 4px solid #f58220;
   background-color: #282828;
-  padding-left: 16px;
+  padding-left: 15px;
+}
+
+.sidebar ul:last-of-type {
+  border-bottom: 0px;
 }
 
 .sidebar li img {
@@ -648,27 +662,32 @@ button:hover {
   float: left;
 }
 
-#logo {
+.sidebar #logo {
   padding-top: 17px;
   padding-left: 20px;
 }
 
-.message {
+.sidebar #hamburger {
+  margin-left: 40px;
+  margin-bottom: 3px;
+}
+
+.sidebar .message {
   margin-left: 20px;
 }
 
-.message h2 {
+.sidebar .message h2 {
   padding: 0;
   margin: 0;
 }
 
-.message a {
+.sidebar .message a {
   position: relative;
   bottom: 14px;
   left: 3px;
 }
 
-.message img:after {
+.sidebar .message img:after {
   display: block;
   width: 12px;
   height: 12px;
@@ -727,6 +746,13 @@ button:hover {
   width: calc(100% - 190px) !important;
 }
 
+@media only screen and (max-width: 992px) {
+  .main-content {
+    padding-left: 55px;
+    width: calc(100% - 55px) !important;
+  }
+}
+
 .inner-container {
   max-width: 685px;
   margin: 23px auto;
@@ -755,10 +781,113 @@ button:hover {
   z-index: 1;
 }
 
-.sidebar ul li i {
-  padding-right: 12px;
+.sidebar #logo {
+  padding-top: 17px;
+  padding-left: 20px;
+}
+
+.sidebar #hamburger {
+  margin-left: 40px;
+  margin-bottom: 3px;
+}
+
+.sidebar .message {
+  margin-left: 20px;
+}
+
+.sidebar .message h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .message a {
   position: relative;
-  top: 2px;
+  bottom: 14px;
+  left: 3px;
+}
+
+.sidebar .message img:after {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #04ae00;
+  border-radius: 50%;
+}
+
+.sidebar .mobile-sidebar {
+  display: none;
+}
+
+/* sidebar - version for tablets */
+@media only screen and (max-width: 992px) {
+  .sidebar {
+    width: 55px;
+  }
+  .sidebar #logo {
+    display: none;
+  }
+  .sidebar #hamburger {
+    margin-left: 17px;
+    margin-top: 23px;
+  }
+  .sidebar ul .menu-text {
+    display: none;
+  }
+  .sidebar .message {
+    margin-left: 12px;
+  }
+  .sidebar .message h2 {
+    display: none;
+  }
+  .sidebar .message img {
+    width: 28px;
+  }
+  .sidebar .message span {
+    display: none;
+  }
+  .sidebar .mobile-sidebar {
+    display: none;
+  }
+}
+
+/* sidebar - version for mobile */
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+    width: 188px;
+    top: 50px;
+    overflow: auto;
+  }
+  .sidebar #logo {
+    display: none;
+  }
+  .sidebar #hamburger {
+    display: none;
+  }
+  .sidebar ul .menu-text {
+    display: inline;
+  }
+  .sidebar .message {
+    margin-left: 20px;
+  }
+  .sidebar .message h2 {
+    display: block;
+  }
+  .sidebar .message img {
+    width: 28px;
+  }
+  .sidebar .message span {
+    display: inline;
+  }
+  .sidebar .mobile-sidebar {
+    display: block;
+    margin-bottom: 40px;
+  }
+}
+
+/* sidebar - mobile version */
+.show {
+  display: block !important;
 }
 
 .top-bar {
@@ -781,5 +910,39 @@ button:hover {
   display: inline-block;
   float: right;
   line-height: 58px;
+}
+
+@media only screen and (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+}
+
+.mobile-top-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: #191919;
+  height: 50px;
+  display: none;
+}
+
+.mobile-top-bar #hamburger-mobile {
+  position: fixed;
+  left: 20px;
+  top: 15px;
+}
+
+.mobile-top-bar #logo-mobile {
+  display: block;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+  .mobile-top-bar {
+    display: block;
+  }
 }
 /*# sourceMappingURL=style.css.map */
