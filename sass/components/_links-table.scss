@@ -1,20 +1,61 @@
 .links-table {
 	line-height: 60px;
-	margin: 23px auto;
 	h3 {
 		margin: 0;
 		line-height: 60px;
 	}
+	table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: 655px;
+		tr {
+			&:hover {
+				background-color: #f1f3f3;
+			}
+			&:hover .table-icon-first {
+				display: inline-block;
+			}
+			&:hover .table-icon-second {
+				display: inline-block;
+			}
+			&:first-of-type {
+				border-top: 1px solid #e3e3e3;
+			}
+			th {
+				font-size: 16px;
+				color: #a6a6a6;
+				line-height: 42px;
+				border-bottom: 1px solid #e3e3e3;
+				width: 46%;
+				h3 {
+					text-align: left;
+					margin-left: 10px;
+				}
+			}
+			td {
+				font-size: 16px;
+				color: #333333;
+				line-height: 42px;
+				border-bottom: 1px solid #e3e3e3;
+				.table-icon-first {
+					color: $orange;
+					padding-right: 20px;
+					display: none;
+					@include respond(break-sm) {
+						display: inline-block;
+					}
+				}
+				.table-icon-second {
+					color: #9c9c9c;
+					display: none;
+					@include respond(break-sm) {
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
 }
-.table-line {
-	border-bottom: 1px solid rgb(227, 227, 227);
-	&:hover {
-		background-color: #F1F3F3;
-	}
-	&:first-of-type {
-		border-top: 1px solid rgb(227, 227, 227);
-	}
-	h3 {
-		padding-left: 14px;
-	}
-}
+
+
+

@@ -1,23 +1,27 @@
 .main-content {
-	padding-left: 190px;
-	background-color: $main-background;
-	width: calc(100% - 190px)!important;
-	@include respond(break-m) {
-        padding-left: 55px;
-        width: calc(100% - 55px)!important;
+    background-color: #f5f5f2;
+    width: 100%;
+    padding: 0 15px 0 205px;
+	@include respond(break-md) {
+        padding: 0 15px 0 70px;
+        width: 100%;
+    }
+    @include respond(break-sm) {
+    	padding: 0 15px;
+    	width: 100%;
     }
 }
 
-.inner-container {
-	max-width: 685px;
-	margin: 23px auto;
-}
 
 .main-section {
 	background-color: $white;
-	margin: 80px 15px 15px 15px;
+	margin: 20px 0 15px 0;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	width: calc(100% - 30px)!important;
+	width: 100%!important;
+    padding-bottom: 15px;
+    &:first-of-type {
+        margin-top: 80px;
+    }
 }
 
 .header {

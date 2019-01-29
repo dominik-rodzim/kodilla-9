@@ -1,13 +1,7 @@
 .table-2-column {
-	max-width: 310px;
-	margin-bottom: 60px;
 	div {
-		max-width: 310px;
-		border-bottom: 2px solid $separator-color;
-		margin-top: 10px;
-	}
-	&:first-of-type {
-		margin-right: 65px;
+		border-bottom: 1px solid $separator-color;
+		margin-top: 15px;
 	}
 	span {
 		color: $paragraph-color;
@@ -23,4 +17,13 @@
 		font-size: $paragraph-font-size;
 		font-weight: $light;
 	}
+	@media(min-width: 768px) {
+		&-right {
+			padding-left: 30px;
+			}
+		&-left {
+			padding-right: 30px;
+		}
+	}
+
 }

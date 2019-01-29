@@ -1,5 +1,5 @@
 function toggleMenu(visible) {
-  document.querySelector('.mobile-sidebar').classList.toggle('show', visible)
+  document.querySelector('.sidebar').classList.toggle('show', visible)
 }
 
 document.querySelector('#hamburger-mobile').addEventListener('click', function(e) {

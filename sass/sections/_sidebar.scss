@@ -1,55 +1,10 @@
-@mixin sidebar {
-	background-color: $sidebar-background;
-	height: 100vh;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 188px;
-	margin-bottom: 22px;
-	border-bottom: 1px solid $sidebar-background;
-	z-index: 1;
-	#logo {
-		padding-top: 17px;
-		padding-left: 20px;
-	}
-
-	#hamburger {
-		margin-left: 40px;
-	    margin-bottom: 3px;
-	}
-
-	.message {
-		margin-left: 20px;
-		h2 {
-			padding: 0;
-			margin: 0;
-		}
-		a {
-			position: relative;
-			bottom: 14px;
-			left: 3px;
-		}
-		img:after {
-			display: block;
-			width: 12px;
-			height: 12px;
-			background-color: #04ae00;
-			border-radius: 50%;
-		}
-	}
-	.mobile-sidebar {
-		display: none;
-	}	
-}
-
 .sidebar {
 	@include sidebar;
 }
 
+/* sidebar - tablet */
 
-/* sidebar - version for tablets */
-
-@include respond(break-m) {
+@include respond(break-md) {
 	.sidebar {
 		width: 55px;
 		#logo {
@@ -82,12 +37,12 @@
     }
 }
 
-/* sidebar - version for mobile */
+/* sidebar - mobile */
 
-@include respond(break-s) {
+@include respond(break-sm) {
 	.sidebar {
 		display: none;
-		width: 188px;
+		width: 198px;
 		top: 50px;
 		overflow: auto;
 		#logo {
@@ -107,7 +62,7 @@
 				display: block;
 			}
 			img {
-				width: 28px;
+				width: auto;
 			}
 			span {
 				display: inline;
@@ -119,8 +74,6 @@
 		}
     }
 }
-
-/* sidebar - mobile version */
 
 .show {
 	display: block!important;

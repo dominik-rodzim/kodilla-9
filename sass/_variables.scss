@@ -1,15 +1,4 @@
-@font-face {
-  font-family: 'Glyphter';
-  src: url('Glyphter.eot') format('eot');
-  src: url('Glyphter.woff') format('woff'),
-  url('Glyphter.ttf') format('truetype'),
-  url('Glyphter.svg') format('svg');
-  font-style: normal;
-  font-weight: normal;
-}
- 
-
-/* Colors */
+/* colors */
 
 $orange: #f58220;
 $white: #ffffff;
@@ -21,23 +10,23 @@ $link-color: #56819f;
 $blue: #80bfca;
 
 
-/* Font sizes */
+/* font sizes */
 
 $paragraph-font-size: 16px;
 $button-font-size: 18px;
 $menu-font-size: 14px;
 $wallet-font: 20px;
 
-/* Fonts */
+/* fonts */
 
 $paragraph-font: "Roboto", Helvetica, Arial;
 
-/* Font weights */
+/* font weights */
 
 $light: 300;
 $normal: 500;
 $bold: 700;
 
-/* Line height */
+/* line height */
 
 $header-line-height: 42px;

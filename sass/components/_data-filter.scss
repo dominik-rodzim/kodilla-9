@@ -1,8 +1,45 @@
+.date-filter {
+    padding: 35px 15px;
+    margin-bottom: 10px;
+    display: flex;
+	justify-content: center;
+	border-bottom: 1px solid $separator-color;
+	@include respond(break-sm) {
+    	padding: 35px 15px;
+	}
+	input {
+		display: inline-block;
+		max-width: 170px;
+		padding-left: 10px;
+		border: none;
+		color: #333333;
+		font-family: $paragraph-font;
+		font-size: $menu-font-size;
+		font-weight: $light;
+		line-height: 42px;
+		@include respond(break-sm) {
+			min-width: 80%;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+	button {
+	    padding: 11px 15px;
+	    margin: 0 0 0 14px;
+	}
+	.button-icon 	{
+		color: white;
+	}
+}
+
 .input-wraper {
-	display: inline-block;
 	border-radius: 3px;
 	border: 1px solid $separator-color;
 	position: relative;
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 	&::after {
 	    display: block;
 	    content: "";
@@ -12,40 +49,15 @@
 	    position: absolute;
 	    top: 4px;
 	    left: 170px;
+		@include respond(break-sm) {
+			display: none;
+		}
 	}
 	i {
 		padding-right: 15px;
-	}
-}
-.date-filter {
-	min-width: 350px;
-	border-radius: 3px;
-	text-align: center;
-	padding: 35px 0;
-	border-bottom: 1px solid $separator-color;
-	input {
-		display: inline-block;
-		width: 100px;
-		padding-left: 20px;
-		padding-right: 30px;
-		line-height: 40px;
-		border: none;
-		color: #333333;
-		font-family: $paragraph-font;
-		font-size: $menu-font-size;
-		font-weight: $light;
-		line-height: 42px;
-		&:first-of-type {
-			padding-right: 50px;
-		}
-		&:focus {
-			outline: none;
-		}
-	}
-	button {
-		padding: 11px 13px;
-	}
-	.button-icon 	{
-		color: white;
+		@include respond(break-sm) {
+			position: relative;
+    		bottom: 23px;
+    	}
 	}
 }

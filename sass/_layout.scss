@@ -1,6 +1,26 @@
+* {
+  box-sizing: border-box;
+}
 
-.icon {
-  font-family: 'Glypther';
+@font-face {
+  font-family: 'Glyphter';
+  src: url('Glyphter.eot') format('eot');
+  src: url('Glyphter.woff') format('woff'),
+  url('Glyphter.ttf') format('truetype'),
+  url('Glyphter.svg') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+.scroll-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.scroll-wrapper table {
+  width: 100%;
+  max-width: 100%;
 }
 
 .clearfix {
@@ -11,50 +31,72 @@
   }
 }
 
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container-inner {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;	
+}
+
 .row {
-  &::before, &::after {
-    content: "";
-    display: table;
-    clear: both;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin grid($prefix) {
+  @for $i from 1 through 12 {
+    .col-#{$prefix}-#{$i} {
+      $width: 100% / 12 * $i;
+      flex: 0 0 $width;
+      max-width: $width;
+    }
   }
 }
 
-[class*="col-"] {
-  float: left;
+@media(max-width: 767px) {
+  @include grid('sm');
 }
 
-@media (max-width: 767px) {
-    @for $i from 1 through 12 {
-        .col-s-#{$i} {
-            width: ((100% / 12) * $i);
-        }
-    }
+@media(min-width: 768px) {
+  @include grid('md');
 }
 
-@media (min-width: 768px) {
-    @for $i from 1 through 12 {
-        .col-m-#{$i} {
-            width: ((100% / 12) * $i);
-        }
-    }
+@media(min-width: 992px) {
+  @include grid('lg');
 }
 
-$break-l: 1200px;
-$break-m: 992px;
-$break-s: 768px;
+@media(min-width: 1200px) {
+  @include grid('xl');
+}
+
+$break-lg: 1200px;
+$break-md: 992px;
+$break-sm: 768px;
 
 @mixin respond($breakpoint) {
-    @if $breakpoint == break-s {
-        @media only screen and (max-width: $break-s) { @content };
+    @if $breakpoint == break-sm {
+        @media only screen and (max-width: $break-sm) { @content };
     }
-    @if $breakpoint == break-m {
-        @media only screen and (max-width: $break-m) { @content };
+    @if $breakpoint == break-md {
+        @media only screen and (max-width: $break-md) { @content };
     }
-    @if $breakpoint == break-l {
-        @media only screen and (max-width: $break-l) { @content };
-    }
-    @if $breakpoint == hover {
-        @media only screen and (min-width: $break-l) { @content };
+    @if $breakpoint == break-lg {
+        @media only screen and (max-width: $break-lg) { @content };
     }
 }
 
