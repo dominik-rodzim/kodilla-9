@@ -808,6 +808,7 @@ button:hover {
   .input-wraper i {
     position: relative;
     bottom: 23px;
+    padding-right: 0px;
   }
 }
 
@@ -833,7 +834,7 @@ button:hover {
 .links-table table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 655px;
+  min-width: 650px;
 }
 
 .links-table table tr:hover {

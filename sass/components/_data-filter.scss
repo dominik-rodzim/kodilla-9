@@ -58,6 +58,7 @@
 		@include respond(break-sm) {
 			position: relative;
     		bottom: 23px;
+    		padding-right: 0px;
     	}
 	}
 }
