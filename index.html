@@ -25,11 +25,58 @@
             <img src="images/dashboard/photo.png">
             <span><a href="#">Mikhael E.</a></span>
          </div>
+         <div class="message-short">
+            <img src="images/dashboard/photo.png">
+         </div>
          <ul class="mobile-sidebar">
-            <li><i>b</i><span>$1,500.00</span><i>A</i></li>
-            <li><i>P</i></li>
-            <li><i>V</i><a href="#">Leonardo Dicaprio</a></li>
-            <li><i>W</i></li>
+            <div class="wallet-mobile">
+               <li class="flex">
+                  <i>b</i>
+                  <span class="wallet-money">$1,500.00</span>
+                  <i class="wallet-mobile-arrow">A</i>
+               </li>
+            </div>
+               <div class="wallet-dropdown-m">
+                  <div class="wallet-item flex">
+                     <p class="wallet-item-text">CPA</p>
+                     <p class="wallet-item-number">$1000</p>
+                  </div>
+                  <div class="wallet-item flex">
+                     <p class="wallet-item-text">CPA</p>
+                     <p class="wallet-item-number">$1000</p>
+                  </div>
+                  <div class="wallet-item flex">
+                     <p class="wallet-item-text">CPA</p>
+                     <p class="wallet-item-number">$1000</p>
+                  </div>
+                  <div class="wallet-item flex">
+                     <p class="wallet-item-text">CPA</p>
+                     <p class="wallet-item-number">$1000</p>
+                  </div>
+               </div>
+            <li class="notification-container">
+               <div class="flex">
+                  <i>P</i>
+                  <i class="notification-arrow-m">A</i>
+               </div>
+            </li>
+            <div class="notification-dropdown-m">
+               <div class="notification-item flex">
+                  <p>You’ve got 100 signups</p>
+                  <div class="orange-dot"></div>
+               </div>
+               <div class="notification-item flex">
+                  <p>You’ve got 100 signups</p>
+                  <div class="orange-dot"></div>
+               </div>
+            </div> 
+            <li>
+               <i>V</i>
+               <a class="user-mobile" href="#">Leonardo Dicaprio</a>
+            </li>
+            <li>
+               <i>W</i>
+            </li>
          </ul>
       </nav>
       <nav class="mobile-top-bar">
@@ -46,12 +93,50 @@
                   <a href="#">Leonardo Dicaprio</a>
                </li>
                <li></li>
-               <li>
-                  <i>P</i>
+               <li class="notification-container">
+                  <i class="notification-trigger">P</i>
+                  <div class="notification">
+                     <div class="notification-icons flex">
+                        <i>P</i>
+                        <i class="notification-cross">I</i>
+                     </div>
+                     <div class="notification-links">
+                        <div class="notification-item flex">
+                           <p>You’ve got 100 signups</p>
+                           <div class="orange-dot"></div>
+                        </div>
+                        <div class="notification-item flex">
+                           <p>You’ve got 100 signups</p>
+                           <div class="orange-dot"></div>
+                        </div>
+                     </div> 
+                  </div>
                </li>
                <li class="wallet">
-                  <i>b</i><span>$1,500.00</span>
-                  <i>A</i>
+                  <i>b</i>
+                  <span>$1,500.00</span>
+                  <i class="wallet-dropdown-trigger">A</i>
+                  <div class="wallet-dropdown">
+                     <i>b</i>
+                     <span>$1,500.00</span>
+                     <i class="wallet-arrow">A</i>
+                     <div class="wallet-item flex">
+                        <span class="wallet-item-text">CPA</span>
+                        <span class="wallet-item-number">$1000</span>
+                     </div>
+                     <div class="wallet-item flex">
+                        <span class="wallet-item-text">CPA</span>
+                        <span class="wallet-item-number">$1000</span>
+                     </div>
+                     <div class="wallet-item flex">
+                        <span class="wallet-item-text">CPA</span>
+                        <span class="wallet-item-number">$1000</span>
+                     </div>
+                     <div class="wallet-item flex">
+                        <span class="wallet-item-text">CPA</span>
+                        <span class="wallet-item-number">$1000</span>
+                     </div>
+                  </div>
                </li>
             </ul>
       </nav>
@@ -185,12 +270,48 @@
                      </div>
                   </div>
                </div>
-                  <div class="button-container">
-                     <button>+ add new</button>
-                  </div>
+               <div class="button-container">
+                  <button>+ add new</button>
+               </div>
             </div>
          </div>
       </div>
+      <div class="overlay" id="overlay">
+         <div class="modal" id="modalLogin">
+            <i class="btn-close js--close-modal">I</i>
+            <div class="header">
+               <h2>Login</h2>
+            </div>
+            <div class="modal-content">
+               <input type="text" placeholder="login name">
+               <input type="text" placeholder="password">
+               <button class="js--close-modal">Enter</button>
+            </div>
+        </div>
+        <div class="modal" id="modalChat">
+            <div class="header">
+               <h2>Online chat with your personal manager</h2>
+            </div> 
+            <div class="modal-chat-info">
+               <div class="modal-chat-info-img">
+                  <img src="/images/dashboard/photo.png">
+               </div>
+               <div class="modal-chat-info-name">
+                  <h2>Michael E.</h2>
+                  <div class="status">
+                     <p>online</p>
+                  </div>
+               </div>
+            </div>
+            <div class="modal-chat-conversation">
+               <img src="/images/dashboard/chat.png">
+            </div>
+            <div class="modal-chat-message">
+               <input class="message-input" placeholder="Enter the message">
+               <button>Send</button>
+            </div>
+        </div>
+      </div>      
       <script src="js/script.js"></script>
    </body>
 </html>

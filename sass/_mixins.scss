@@ -5,20 +5,26 @@
 	top: 0;
 	left: 0;
 	width: 188px;
+	transition: 0.4s;
 	margin-bottom: 22px;
 	border-bottom: 1px solid $sidebar-background;
 	z-index: 2;
 	#logo {
-		padding-top: 17px;
-		padding-left: 20px;
+    	margin: 17px 17px 0 20px;
 	}
 
 	#hamburger {
-		margin-left: 40px;
-	    margin-bottom: 3px;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+		cursor: pointer;
+	    padding: 20px;
+	    background: #191919;
 	}
 
 	.message {
+		overflow: hidden;
+    	white-space: nowrap;		
 		margin-left: 20px;
 		h2 {
 			padding: 0;
@@ -39,5 +45,64 @@
 	}
 	.mobile-sidebar {
 		display: none;
+		.flex {
+			justify-content: space-between;
+		}
+		.wallet-mobile {
+			.flex {
+				justify-content: space-between;
+				padding: 0 19px;
+				.wallet-money {
+					line-height: 20px;
+					padding-top: 14px;
+				}
+				.wallet-mobile-arrow {
+					padding: 0;
+					transition: .2s;
+				}
+			}
+		}
+		.wallet-dropdown-m {
+			height: 0px;
+			padding: 0 19px;
+			transition: 1s;
+			overflow: hidden;
+			p {
+				font-size: 13px;
+				line-height: 10px;
+			}
+		}
+
+		.notification-container {
+			padding: 0 19px;
+		}
+		.notification-arrow-m {
+			padding: 0;
+			transition: .2s;
+		}
+		.notification-dropdown-m {
+			padding: 0 19px;
+			height: 0px;
+			transition: 1s;
+			overflow: hidden;
+			.notification-item {
+				line-height: 15px;
+				justify-content: space-between;
+				align-items: center;
+				p {
+					font-size: 13px;
+				}
+				.orange-dot {
+			    	width: 9px;
+					height: 8px;
+					background-color: #f58220;
+					display: block;
+					border-radius: 50%;
+				}
+			}
+		}
+		.user-mobile {
+			font-size: 14px;
+		}
 	}	
 }
