@@ -70,11 +70,11 @@
                   <div class="orange-dot"></div>
                </div>
             </div> 
-            <li>
+            <li class="user-mobile-container">
                <i>V</i>
                <a class="user-mobile" href="#">Leonardo Dicaprio</a>
             </li>
-            <li>
+            <li class="quit-mobile">
                <i>W</i>
             </li>
          </ul>
@@ -85,7 +85,7 @@
       </nav>
       <nav class="top-bar clearfix">
          <ul>
-            <li>
+            <li class="quit">
                <i>W</i>
                </li>
                <li class="user">
@@ -178,9 +178,9 @@
                   <div class="graph">
                      <h3>Earnings chart</h3>
                      <div class="scroll-wrapper">
-                        <img id="graph" src="images/dashboard/graph.png">
+                        <canvas id="myChart"></canvas>
                      </div>
-                  </div>              
+                  </div>
                </div>
             </div>
             <div class="col-sm-12 main-section">
@@ -291,6 +291,7 @@
         <div class="modal" id="modalChat">
             <div class="header">
                <h2>Online chat with your personal manager</h2>
+               <i class="btn-close js--close-modal">I</i>
             </div> 
             <div class="modal-chat-info">
                <div class="modal-chat-info-img">
@@ -311,7 +312,18 @@
                <button>Send</button>
             </div>
         </div>
-      </div>      
+         <div class="modal" id="modalQuit">
+            <i class="btn-close js--close-modal">I</i>
+            <div class="header">
+               <h2>Do you really want to Quit?</h2>
+            </div>
+            <div class="modal-content">
+               <button class="js--close-modal cancel-btn">Cancel</button>
+               <button>Quit</button>
+            </div>
+        </div>
+      </div>     
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script> 
       <script src="js/script.js"></script>
    </body>
 </html>

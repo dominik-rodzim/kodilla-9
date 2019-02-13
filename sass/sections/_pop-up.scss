@@ -3,17 +3,13 @@
   top: 0;
   left: 0;
   z-index: 999;
-
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.5);
-
   justify-content: center;
   align-items: center;
-
   overflow: auto;
   padding: 30px;
-
   display: none;
 }
 
@@ -28,7 +24,7 @@
 .modal {
   max-width: 600px;
   margin: auto;
-  background-color: #ffffff;
+  background-color: $white;
   position: relative;
   display: none;
 }
@@ -54,10 +50,10 @@
   input {
     height: 40px;
     border-radius: 3px;
-    border: 1px solid #e3e3e3;
-    color: #a6a6a6;
-    font-family: Roboto;
-    font-size: 14px;
+    border: 1px solid $separator-color;
+    color: $paragraph-color;
+    font-family: $paragraph-font;
+    font-size: $menu-font-size;
     font-weight: 300;
     line-height: 42px;
     padding-left: 10px;
@@ -76,11 +72,27 @@
 }
 
 #modalChat {
-  min-width: 1000px;
+  max-width: 1000px;
+  width: 100%;
+  .header {
+    position: relative;
+    padding-right: 20px;
+    h2 {
+      @include respond(break-sm) {
+        line-height: 27px;
+        padding-top: 5px;
+      }
+    }
+    i {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  }
   .modal-chat-info {
     display: flex;
     padding-bottom: 10px;
-    border-bottom: 1px solid #e3e3e3;
+    border-bottom: 1px solid $separator-color;
     &-img {
       padding: 17px;
       height: 77px;
@@ -91,12 +103,12 @@
       flex-direction: column;
       justify-content: center;
       h2 {
-        font-family: Roboto;
+        font-family: $paragraph-font;
         font-size: 30px;
-        font-weight: 500;
+        font-weight: $normal;
         line-height: 42px;
         text-transform: initial;
-        color: black;
+        color: $black;
         padding: 0;  
       }
       .status {
@@ -110,15 +122,68 @@
           padding: 4px 0 0 6px;
           display: inline;
           width: 10%!important;
-          color: #ffffff;
-          font-family: Roboto;
+          color: $white;
+          font-family: $paragraph-font;
           font-size: 12px;
-          font-weight: 300;          
+          font-weight: $light;          
         }  
       }
     }
   }
   .modal-chat-conversation {
-    border-bottom: 1px solid #e3e3e3;
+    border-bottom: 1px solid $separator-color;
+    overflow: hidden;
+    img {
+      width: 100%;
+      min-width: 720px;
+    }
+  }
+  .modal-chat-message {
+    display: flex;
+    align-items: center;
+    input {
+      flex-basis: 90%;
+      border-radius: 3px;
+      border: 1px solid $separator-color;
+      margin: 17px;
+      line-height: 40px;
+      padding-left: 20px;
+      width: 50%;
+      color: $paragraph-color;
+      font-family: $paragraph-font;
+      font-size: $menu-font-size;
+      font-weight: 300;
+    }
+    button {
+      height: 43px;
+      margin-right: 17px;
+    }
+  }
+}
+
+#modalQuit {
+  max-width: 360px;
+  width: 100%;
+  .header {
+    h2 {
+      text-transform: initial;
+    }
+  }
+  .modal-content {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    button {
+      width: 95px;
+      height: 40px;
+      padding: 0;
+      margin: 0;
+      &:first-of-type {
+        margin-right: 20px;
+      }
+    }
+    .cancel-btn {
+      background-color: #979797;
+    }    
   }
 }

@@ -19,13 +19,13 @@
 				display: inline-block;
 			}
 			&:first-of-type {
-				border-top: 1px solid #e3e3e3;
+				border-top: 1px solid $separator-color;
 			}
 			th {
-				font-size: 16px;
-				color: #a6a6a6;
+				font-size: $paragraph-font-size;
+				color: $paragraph-color;
 				line-height: 42px;
-				border-bottom: 1px solid #e3e3e3;
+				border-bottom: 1px solid $separator-color;
 				width: 46%;
 				h3 {
 					text-align: left;
@@ -34,9 +34,9 @@
 			}
 			td {
 				font-size: 16px;
-				color: #333333;
+				color: $black;
 				line-height: 42px;
-				border-bottom: 1px solid #e3e3e3;
+				border-bottom: 1px solid $separator-color;
 				.table-icon-first {
 					color: $orange;
 					padding-right: 20px;

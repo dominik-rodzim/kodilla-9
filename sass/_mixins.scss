@@ -19,7 +19,7 @@
 	    top: 0;
 		cursor: pointer;
 	    padding: 20px;
-	    background: #191919;
+	    background: $sidebar-background;
 	}
 
 	.message {
@@ -52,6 +52,9 @@
 			.flex {
 				justify-content: space-between;
 				padding: 0 19px;
+				&:hover {
+					padding: 0 19px 0 15px;
+				}
 				.wallet-money {
 					line-height: 20px;
 					padding-top: 14px;
@@ -75,6 +78,9 @@
 
 		.notification-container {
 			padding: 0 19px;
+			&:hover {
+				padding: 0 19px 0 15px;
+			}
 		}
 		.notification-arrow-m {
 			padding: 0;
@@ -95,14 +101,14 @@
 				.orange-dot {
 			    	width: 9px;
 					height: 8px;
-					background-color: #f58220;
+					background-color: $orange;
 					display: block;
 					border-radius: 50%;
 				}
 			}
 		}
 		.user-mobile {
-			font-size: 14px;
+			font-size: $menu-font-size;
 		}
 	}	
 }

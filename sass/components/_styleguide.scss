@@ -35,6 +35,9 @@ a {
 	font-size: $paragraph-font-size;
 	font-weight: $light;
 	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
 }
 ul {
 }
@@ -62,6 +65,8 @@ button {
 	padding: 10px 20px;
 	font-weight: $light;
 	margin: 0 auto;
+	transition: .3s;
+	cursor: pointer;
 	&:hover {
 		background-color: $blue;
 	}
